@@ -1,0 +1,31 @@
+Maciej Bąkała
+
+285791
+
+Project: Linear regression model for CCPP power prediction using AWS Sagemaker
+
+The goal of this project was to create a model capable of predicting power generated at a Combined Cycle Power Plant (CCPP), using dataset of 9569 measurement points of ambient parameters. The data consisted of: Atmospheric temperature and pressure, relative humidity and exhaust vacuum. Data was taken from:
+
+https://archive.ics.uci.edu/ml/datasets/combined+cycle+power+plant
+
+Tools used in this project were:
+
+Amazon Sagemaker – AWS platform for machine learning
+Amazon Simple Storage Service (S3)
+Sagemaker is a perfect tool to use in this case. It allows user to work in a Jupyter notebook on a chosen instance without having to download or configure it by hand. Additionally there are multiple algorithms available to the user which simplifies the process of creating a model. The algorithm used in this project was Linear learner.
+
+The code was written in Python 3. The steps in a process were:
+
+loading the dataset (csv file)
+splitting it in 3 to training:
+training which was used to train a model
+validation to test the model during the process of training and adjust the model
+test to compare model predictions with the remaining data
+uploading files to created S3 bucket
+loading the linear learner algorithm
+training the model at a ml.c4.xlarge type instance
+creating the endpoint of the trained model
+testing the model
+deleting the endpoint to release the instance
+The accuracy of the model was 99.92 %.
+
