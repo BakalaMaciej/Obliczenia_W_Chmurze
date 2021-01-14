@@ -27,5 +27,5 @@ training the model at a ml.c4.xlarge type instance
 creating the endpoint of the trained model
 testing the model
 deleting the endpoint to release the instance
-The accuracy of the model was 99.92 %.
+The average error of the model was 0,826 %.
 
